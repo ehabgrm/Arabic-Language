@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - معهد الإيهاب لتدريس اللغة العربية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>معهد الإيهاب</h1>
+                <p>لتدريس اللغة العربية لأغراض خاصة</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="index.html#courses"><i class="fas fa-graduation-cap"></i> الدورات</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> عن المعهد</a>
+                <a href="contact.html" class="active"><i class="fas fa-envelope"></i> اتصل بنا</a>
+            </div>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h2>تواصل معنا</h2>
+            <p>نحن هنا للإجابة على استفساراتكم ومساعدتكم في اختيار الدورة المناسبة</p>
+        </section>
+
+        <section class="contact-info">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>العنوان</h3>
+                    <p>10 شارع الليث بن سعد، النزهة، القاهرة، مصر</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>الهاتف</h3>
+                    <p>001017650972</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>ehabgrm@yahoo.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>ساعات العمل</h3>
+                    <p>الأحد - الخميس: 9:00 صباحاً - 5:00 مساءً</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>نموذج التواصل</h2>
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">الدورة المطلوبة</label>
+                    <select id="course" name="course">
+                        <option value="">اختر الدورة</option>
+                        <option value="academic">العربية للمجال الأكاديمي</option>
+                        <option value="media">العربية للمجال الإعلامي</option>
+                        <option value="legal">العربية للمجال الجنائي</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">الرسالة</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+        </section>
+
+        <section class="map">
+            <h2>موقعنا</h2>
+            <div class="map-container">
+                <!-- هنا يمكن إضافة خريطة جوجل -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d13876.367547748878!2d31.342725649999995!3d30.119456300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sar!2seg!4v1733772046182!5m2!1sar!2seg" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="social-media">
+            <h2>تابعنا على مواقع التواصل الاجتماعي</h2>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-nav">
+                <a href="index.html">الرئيسية</a>
+                <a href="index.html#courses">الدورات</a>
+                <a href="about.html">عن المعهد</a>
+                <a href="contact.html">اتصل بنا</a>
+            </div>
+            <p>جميع الحقوق محفوظة &copy; 2024 - معهد الإيهاب</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

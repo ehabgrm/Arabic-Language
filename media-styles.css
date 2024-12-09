@@ -1,0 +1,477 @@
+{
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.media-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://source.unsplash.com/1600x900/?media,news') center/cover;
+    opacity: 0.1;
+}
+
+.media-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.media-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.media-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.media-icons i {
+    font-size: 2.5rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.media-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* قسم المميزات */
+.media-features {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: #2a5298;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+/* محتوى البرنامج */
+.program-content {
+    padding: 5rem 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.content-module {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.module-header i {
+    font-size: 2rem;
+    color: #2a5298;
+}
+
+.content-module ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-module ul li {
+    padding: 0.5rem 0;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.content-module ul li::before {
+    content: "•";
+    color: #2a5298;
+    position: absolute;
+    right: 0;
+}
+
+/* التدريب العملي */
+.practical-training {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.training-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.training-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.training-card h3, 
+.training-card p {
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.training-card h3 {
+    color: #1e3c72;
+    border-bottom: 1px solid #eee;
+}
+
+/* قسم التسجيل */
+.enrollment {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+}
+
+.enrollment-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course-details {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.course-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.course-details ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.course-details ul li i {
+    font-size: 1.2rem;
+}
+
+.price-box {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.enroll-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    color: #1e3c72;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.enroll-btn:hover {
+    transform: scale(1.05);
+}
+
+/* العناوين الرئيسية */
+h2 {
+    text-align: center;
+    color: #fafbfd;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .media-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .media-icons {
+        gap: 1rem;
+    }
+    
+    .media-icons i {
+        font-size: 2rem;
+    }
+    
+    .features-grid,
+    .content-grid,
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-details {
+        padding: 1rem;
+    }
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card,
+.content-module,
+.training-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+css
+/* تحسين التأثيرات الحركية والصور */
+
+/* تأثيرات حركية للأيقونات */
+.media-icons i {
+    animation: float 3s ease-in-out infinite;
+    opacity: 0;
+}
+
+.media-icons i:nth-child(1) { animation-delay: 0.2s; }
+.media-icons i:nth-child(2) { animation-delay: 0.4s; }
+.media-icons i:nth-child(3) { animation-delay: 0.6s; }
+.media-icons i:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* تحسين صور التدريب العملي */
+.training-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.training-card img {
+    transition: transform 0.5s ease;
+}
+
+.training-card:hover img {
+    transform: scale(1.1);
+}
+
+.training-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+    pointer-events: none;
+}
+
+/* تأثيرات حركية للبطاقات */
+.feature-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.feature-card:hover {
+    animation: cardHover 0.3s forwards;
+}
+
+@keyframes cardHover {
+    0% {
+        transform: translateY(0) rotateX(0);
+    }
+    100% {
+        transform: translateY(-10px) rotateX(5deg);
+    }
+}
+
+/* تأثيرات ظهور العناصر عند التمرير */
+.content-module {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.content-module.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تأثيرات للأزرار */
+.enroll-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.enroll-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.enroll-btn:hover::before {
+    left: 100%;
+}
+
+/* تحسين القسم الرئيسي */
+.media-hero-content {
+    animation: heroFade 1s ease-out;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأثيرات للنصوص */
+.feature-card h3,
+.content-module h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.feature-card h3::after,
+.content-module h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2a5298;
+    transition: width 0.3s ease;
+}
+
+.feature-card:hover h3::after,
+.content-module:hover h3::after {
+    width: 100%;
+}
+```
+
+وأضف هذا الكود JavaScript في نهاية ملف script.js:
+
+```javascript
+// تفعيل تأثيرات الظهور عند التمرير
+document.addEventListener('DOMContentLoaded', function() {
+    const modules = document.querySelectorAll('.content-module');
+    
+    function checkScroll() {
+        modules.forEach(module => {
+            const moduleTop = module.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (moduleTop < windowHeight * 0.8) {
+                module.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // تشغيل عند تحميل الصفحة
+});
+
+// تحسين تحميل الصور
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.classList.add('loaded');
+        });
+    });
+});

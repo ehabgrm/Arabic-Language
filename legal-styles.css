@@ -1,0 +1,361 @@
+css
+/* تنسيقات خاصة بصفحة المجال القانوني */
+
+.course-hero {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://source.unsplash.com/1600x900/?law,legal') center/cover;
+    opacity: 0.1;
+}
+
+.course-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: heroFade 1s ease-out;
+}
+
+.course-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.course-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* قسم نظرة عامة */
+.course-overview {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.overview-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.overview-card:hover {
+    animation: cardHover 0.3s forwards;
+}
+
+.overview-card i {
+    font-size: 3rem;
+    color: #2a5298;
+    margin-bottom: 1.5rem;
+}
+
+.overview-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.overview-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2a5298;
+    transition: width 0.3s ease;
+}
+
+.overview-card:hover h3::after {
+    width: 100%;
+}
+
+/* قسم محتوى البرنامج */
+.course-content {
+    padding: 5rem 0;
+}
+
+.content-modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.module {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.module.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.module h3 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+}
+
+.module ul {
+    list-style: none;
+    padding: 0;
+}
+
+.module ul li {
+    padding: 0.5rem 0;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.module ul li::before {
+    content: "•";
+    color: #2a5298;
+    position: absolute;
+    right: 0;
+}
+
+/* مخرجات التعلم */
+.learning-outcomes {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.outcome {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.outcome i {
+    font-size: 1.5rem;
+    color: #2a5298;
+}
+
+/* قسم التسجيل */
+.registration {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+}
+
+.registration h2 {
+    color: #ffffff;
+}
+
+.registration-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.price-box {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.requirements {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.requirements ul,
+.price-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.requirements ul li,
+.price-box ul li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.register-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    color: #1e3c72;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.register-btn:hover::before {
+    left: 100%;
+}
+
+.register-btn:hover {
+    transform: scale(1.05);
+}
+
+/* قسم الشهادات */
+.testimonials {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+    color: #1e3c72;
+    margin: 1rem 0;
+}
+
+.position {
+    color: #666;
+    font-style: italic;
+}
+
+/* العناوين الرئيسية */
+h2 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .course-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .overview-grid,
+    .content-modules,
+    .outcomes-grid,
+    .registration-content,
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* تأثيرات حركية */
+@keyframes cardHover {
+    0% {
+        transform: translateY(0) rotateX(0);
+    }
+    100% {
+        transform: translateY(-10px) rotateX(5deg);
+    }
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
