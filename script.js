@@ -44,63 +44,33 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.course-card').forEach(card => {
-    observer.observe(card);
+// Hero Slider
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    // Start automatic slideshow
+    setInterval(nextSlide, slideInterval);
 });
 
-// Slider functionality
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-let currentSlide = 0;
-let slideInterval;
-
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-    
-    slides[currentSlide].classList.add('active');
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-function startSlideShow() {
-    if (slideInterval) {
-        clearInterval(slideInterval);
-    }
-    slideInterval = setInterval(nextSlide, 5000); // تغيير الصورة كل 5 ثواني
-}
-
 // إضافة مستمعي الأحداث
-if (prevBtn && nextBtn) {
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        startSlideShow(); // إعادة تشغيل المؤقت
-    });
-
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        startSlideShow(); // إعادة تشغيل المؤقت
-    });
-}
-
-// بدء العرض التلقائي عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', () => {
-    if (slides.length > 0) {
-        showSlide(0);
-        startSlideShow();
+    try {
+        // تهيئة بطاقات الدورات
+        const courseCards = document.querySelectorAll('.course-card');
+        if (courseCards.length > 0) {
+            courseCards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+    } catch (error) {
+        console.error('حدث خطأ أثناء تهيئة الصفحة:', error);
     }
 });

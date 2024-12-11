@@ -292,7 +292,6 @@ h2 {
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-css
 /* تحسين التأثيرات الحركية والصور */
 
 /* تأثيرات حركية للأيقونات */
@@ -441,37 +440,257 @@ css
 .content-module:hover h3::after {
     width: 100%;
 }
-```
 
-وأضف هذا الكود JavaScript في نهاية ملف script.js:
+/* أنماط خاصة بصفحة المجال الإعلامي */
+.media-page {
+    background-color: var(--media-light);
+}
 
-```javascript
-// تفعيل تأثيرات الظهور عند التمرير
-document.addEventListener('DOMContentLoaded', function() {
-    const modules = document.querySelectorAll('.content-module');
-    
-    function checkScroll() {
-        modules.forEach(module => {
-            const moduleTop = module.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (moduleTop < windowHeight * 0.8) {
-                module.classList.add('visible');
-            }
-        });
+.media-page header {
+    background: var(--media-primary);
+}
+
+.media-page .hero-overlay {
+    background: var(--media-gradient);
+}
+
+.media-page section h2 {
+    color: var(--media-primary);
+}
+
+.media-page .btn.primary {
+    background-color: var(--media-secondary);
+}
+
+.media-page .btn.primary:hover {
+    background-color: var(--media-primary);
+}
+
+.media-page .course-modules {
+    background: var(--media-gradient);
+    color: white;
+    padding: 4rem 0;
+}
+
+.media-page .course-modules h2,
+.media-page .course-modules h3 {
+    color: white;
+}
+
+.media-page .module {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.media-page .module:hover {
+    transform: translateY(-10px);
+}
+
+.media-page .module i {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.media-page .enrollment {
+    background: var(--media-gradient);
+    padding: 4rem 0;
+    color: white;
+}
+
+.media-page .enrollment h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.media-page .enrollment .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.media-page .course-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.media-page .course-details h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.media-page .course-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.media-page .course-details li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.media-page .course-details li i {
+    margin-left: 1rem;
+    color: var(--media-light);
+}
+
+.media-page .registration {
+    background: var(--media-gradient);
+    padding: 4rem 0;
+}
+
+.media-page .registration h2 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.media-page .registration-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.media-page .form-group input {
+    border: 2px solid var(--media-secondary);
+    border-radius: 5px;
+    padding: 0.8rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.media-page .form-group input:focus {
+    outline: none;
+    border-color: var(--media-primary);
+    box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.2);
+}
+
+.media-page .overview {
+    background: white;
+    padding: 4rem 0;
+}
+
+.media-page .overview p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .media-page .module {
+        padding: 1.5rem;
     }
-
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // تشغيل عند تحميل الصفحة
-});
-
-// تحسين تحميل الصور
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
     
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.classList.add('loaded');
-        });
-    });
-});
+    .media-page .overview p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* أنماط لقسم مخرجات التعلم */
+.media-page .learning-outcomes {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.media-page .learning-outcomes h2 {
+    text-align: center;
+    color: var(--media-primary);
+    margin-bottom: 3rem;
+}
+
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.outcome-card {
+    background: var(--media-light);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outcome-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.outcome-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--media-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.outcome-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.outcome-card h3 {
+    color: var(--media-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.outcome-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.outcome-card li {
+    position: relative;
+    padding-right: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.outcome-card li::before {
+    content: "•";
+    color: var(--media-secondary);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .outcome-card {
+        padding: 1.5rem;
+    }
+}

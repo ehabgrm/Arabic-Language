@@ -9,49 +9,60 @@
 </head>
 <body>
     <header>
-        <nav class="main-nav">
-            <div class="logo">
-                <h1>معهد الإيهاب</h1>
-                <p>لتدريس اللغة العربية لأغراض خاصة</p>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-text">
+                        <h1>معهد الإيهاب</h1>
+                        <span>أكاديمية اللغة العربية المتخصصة</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#courses"><i class="fas fa-graduation-cap"></i> الدورات</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> عن المعهد</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+                <button class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <div class="nav-links">
-                <a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a>
-                <a href="#courses"><i class="fas fa-graduation-cap"></i> الدورات</a>
-                <a href="about.html"><i class="fas fa-info-circle"></i> عن المعهد</a>
-                <a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a>
-            </div>
-            <button class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="slider">
-                <div class="slide active">
-                    <img src="https://source.unsplash.com/1600x900/?arabic-calligraphy" alt="خط عربي">
-                    <div class="slide-content">
-                        <h2>مرحباً بكم في معهد الإيهاب</h2>
-                        <p>نقدم دورات متخصصة في تعليم اللغة العربية للأغراض الخاصة</p>
+        <section class="hero-slider">
+            <div class="slide active" style="background-image: url('images/hero1.jpg')">
+                <div class="slide-content">
+                    <h1 class="fadeInUp">العربية للمجال الأكاديمي</h1>
+                    <p class="fadeInUp delay-1">برنامج متخصص لتعليم اللغة العربية في المجال الأكاديمي والبحثي</p>
+                    <div class="cta-buttons fadeInUp delay-2">
+                        <a href="academic.html" class="btn primary">اكتشف البرنامج</a>
+                        <a href="#courses" class="btn secondary">جميع البرامج</a>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="https://source.unsplash.com/1600x900/?arabic-books" alt="كتب عربية">
-                    <div class="slide-content">
-                        <h2>تعليم متخصص</h2>
-                        <p>دورات مصممة خصيصاً لتلبية احتياجاتك المهنية والأكاديمية</p>
+            </div>
+            
+            <div class="slide" style="background-image: url('images/hero2.jpg')">
+                <div class="slide-content">
+                    <h1>العربية للمجال الإعلامي</h1>
+                    <p>برنامج متخصص لتعليم اللغة العربية في مجال الإعلام والصحافة</p>
+                    <div class="cta-buttons">
+                        <a href="media.html" class="btn primary">اكتشف البرنامج</a>
+                        <a href="#courses" class="btn secondary">جميع البرامج</a>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="https://source.unsplash.com/1600x900/?education" alt="تعليم">
-                    <div class="slide-content">
-                        <h2>منهج متكامل</h2>
-                        <p>نجمع بين النظرية والتطبيق في تعليم اللغة العربية</p>
+            </div>
+            
+            <div class="slide" style="background-image: url('images/hero3.jpg')">
+                <div class="slide-content">
+                    <h1>العربية للمجال القانوني</h1>
+                    <p>برنامج متخصص لتعليم اللغة العربية في المجال القانوني والجنائي</p>
+                    <div class="cta-buttons">
+                        <a href="legal.html" class="btn primary">اكتشف البرنامج</a>
+                        <a href="#courses" class="btn secondary">جميع البرامج</a>
                     </div>
                 </div>
-                <button class="slider-btn prev-btn" aria-label="السابق">❮</button>
-                <button class="slider-btn next-btn" aria-label="التالي">❯</button>
             </div>
         </section>
 
@@ -59,22 +70,40 @@
             <h2>دوراتنا المتخصصة</h2>
             <div class="course-grid">
                 <div class="course-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>العربية للمجال الأكاديمي</h3>
-                    <p>تعلم اللغة العربية للبحث والدراسة الأكاديمية</p>
-                    <a href="academic.html" class="btn">اعرف المزيد</a>
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" alt="العربية للمجال الأكاديمي" onerror="this.src='images/fallback-image.jpg'">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-content">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>العربية للمجال الأكاديمي</h3>
+                        <p>تعلم اللغة العربية للبحث والدراسة الأكاديمية</p>
+                        <a href="academic.html" class="btn">اعرف المزيد</a>
+                    </div>
                 </div>
                 <div class="course-card">
-                    <i class="fas fa-newspaper"></i>
-                    <h3>العربية للمجال الإعلامي</h3>
-                    <p>تعلم اللغة العربية للصحافة والإعلام</p>
-                    <a href="media.html" class="btn">اعرف المزيد</a>
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="العربية للمجال الإعلامي" onerror="this.src='images/fallback-image.jpg'">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-content">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>العربية للمجال الإعلامي</h3>
+                        <p>تعلم اللغة العربية للصحافة والإعلام</p>
+                        <a href="media.html" class="btn">اعرف المزيد</a>
+                    </div>
                 </div>
                 <div class="course-card">
-                    <i class="fas fa-gavel"></i>
-                    <h3>العربية للمجال الجنائي</h3>
-                    <p>تعلم اللغة العربية للمجال القانوني والجنائي</p>
-                    <a href="legal.html" class="btn">اعرف المزيد</a>
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="العربية للمجال الجنائي" onerror="this.src='images/fallback-image.jpg'">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-content">
+                        <i class="fas fa-gavel"></i>
+                        <h3>العربية للمجال الجنائي</h3>
+                        <p>تعلم اللغة العربية للمجال القانوني والجنائي</p>
+                        <a href="legal.html" class="btn">اعرف المزيد</a>
+                    </div>
                 </div>
             </div>
         </section>

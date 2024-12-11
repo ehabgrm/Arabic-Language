@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="media-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="media-page">
     <header>
         <nav class="main-nav">
             <div class="logo">
@@ -28,15 +28,47 @@
     </header>
 
     <main>
-        <section class="media-hero">
-            <div class="media-hero-content">
-                <h1>العربية للمجال الإعلامي</h1>
-                <p>برنامج متخصص لتطوير المهارات اللغوية في مجال الإعلام والصحافة</p>
-                <div class="media-icons">
-                    <i class="fas fa-newspaper"></i>
-                    <i class="fas fa-microphone"></i>
-                    <i class="fas fa-video"></i>
-                    <i class="fas fa-broadcast-tower"></i>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1920&q=80" alt="العربية للمجال الإعلامي">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="fadeInUp">العربية للمجال الإعلامي</h1>
+                <p class="fadeInUp delay-1">برنامج متخصص لتعليم اللغة العربية في مجال الإعلام والصحافة</p>
+                <div class="cta-buttons fadeInUp delay-2">
+                    <a href="#program-content" class="btn primary">تعرف على البرنامج</a>
+                    <a href="#enrollment" class="btn secondary">سجل الآن</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-overview">
+            <div class="container">
+                <h2 class="section-title">نظرة عامة عن البرنامج</h2>
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <p>يقدم برنامج العربية للإعلام تدريباً شاملاً على المهارات اللغوية المتخصصة في المجال الإعلامي، حيث يركز على تطوير قدرات المتعلمين في:</p>
+                        <ul class="overview-list">
+                            <li>
+                                <i class="fas fa-pen-fancy"></i>
+                                <span>كتابة التقارير الإخبارية والمقالات الصحفية باللغة العربية</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-microphone-alt"></i>
+                                <span>تقديم البرامج الإذاعية والتلفزيونية</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-video"></i>
+                                <span>إعداد وتحرير المحتوى الإعلامي للمنصات الرقمية</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-language"></i>
+                                <span>المصطلحات الإعلامية المتخصصة والتعابير المهنية</span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -69,7 +101,7 @@
             </div>
         </section>
 
-        <section class="program-content">
+        <section class="program-content" id="program-content">
             <div class="container">
                 <h2>محتوى البرنامج</h2>
                 <div class="content-grid">
@@ -113,30 +145,71 @@
             </div>
         </section>
 
-        <section class="practical-training">
+        <section class="learning-outcomes">
             <div class="container">
-                <h2>التدريب العملي</h2>
-                <div class="training-grid">
-                    <div class="training-card">
-                        <img src="https://source.unsplash.com/400x300/?newsroom" alt="استديو إخباري">
-                        <h3>تدريب استديو</h3>
-                        <p>تدريب عملي في استديو مجهز للبث التلفزيوني والإذاعي</p>
+                <h2>مخرجات التعلم</h2>
+                <div class="outcomes-grid">
+                    <div class="outcome-card">
+                        <div class="outcome-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>الكتابة الإعلامية</h3>
+                        <ul>
+                            <li>القدرة على كتابة التقارير الإخبارية باحترافية</li>
+                            <li>إتقان صياغة العناوين والمقدمات الصحفية</li>
+                            <li>تطوير مهارات التحرير والتدقيق اللغوي</li>
+                        </ul>
                     </div>
-                    <div class="training-card">
-                        <img src="https://source.unsplash.com/400x300/?interview" alt="مقابلات صحفية">
-                        <h3>مقابلات صحفية</h3>
-                        <p>تدريب على إجراء وإدارة المقابلات الصحفية</p>
+                    <div class="outcome-card">
+                        <div class="outcome-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3>التقديم الإعلامي</h3>
+                        <ul>
+                            <li>إتقان مهارات الإلقاء والتقديم التلفزيوني</li>
+                            <li>التحكم في نبرة الصوت ومخارج الحروف</li>
+                            <li>القدرة على إدارة الحوارات والمقابلات</li>
+                        </ul>
                     </div>
-                    <div class="training-card">
-                        <img src="https://source.unsplash.com/400x300/?media" alt="تحرير صحفي">
-                        <h3>تحرير صحفي</h3>
-                        <p>ورش عمل في التحرير الصحفي وكتابة الأخبار</p>
+                    <div class="outcome-card">
+                        <div class="outcome-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>الإعلام الرقمي</h3>
+                        <ul>
+                            <li>إنتاج محتوى احترافي لمنصات التواصل</li>
+                            <li>كتابة المحتوى للمواقع الإخبارية</li>
+                            <li>إدارة المنصات الإعلامية الرقمية</li>
+                        </ul>
+                    </div>
+                    <div class="outcome-card">
+                        <div class="outcome-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>المهارات اللغوية</h3>
+                        <ul>
+                            <li>استخدام المصطلحات الإعلامية بدقة</li>
+                            <li>إتقان اللغة العربية الفصحى المعاصرة</li>
+                            <li>القدرة على الترجمة الإعلامية</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="enrollment">
+        <section class="course-content">
+            <!-- محتوى البرنامج -->
+        </section>
+
+        <section class="course-features">
+            <!-- مميزات البرنامج -->
+        </section>
+
+        <section class="registration">
+            <!-- نموذج التسجيل -->
+        </section>
+
+        <section class="enrollment" id="enrollment">
             <div class="container">
                 <h2>التسجيل في البرنامج</h2>
                 <div class="enrollment-content">

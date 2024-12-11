@@ -1,8 +1,32 @@
-css
 /* تنسيقات خاصة بصفحة الأكاديمي */
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .course-hero {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(-45deg, #2c3e50, #3498db, #2980b9, #34495e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     padding: 8rem 2rem 4rem;
     text-align: center;
     color: #ffffff;
@@ -19,6 +43,7 @@ css
     bottom: 0;
     background: url('https://source.unsplash.com/1600x900/?academic,university') center/cover;
     opacity: 0.1;
+    animation: fadeInUp 1s ease-out;
 }
 
 .course-hero-content {
@@ -32,11 +57,15 @@ css
     font-size: 3rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease-out;
 }
 
 .course-hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 /* قسم نظرة عامة */
